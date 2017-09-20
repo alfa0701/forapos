@@ -1,57 +1,8 @@
 import React, { Component } from 'react'
 import { Provider } from 'mobx-react'
-import {
-  TabNavigator, StackNavigator
-} from 'react-navigation'
-
-import Tables from './src/routes/Tables'
-import Menu from './src/routes/Menu'
-import OrderTables from './src/routes/OrderTables'
-import Orders from './src/routes/Orders'
 
 import stores from './src/store/index'
-
-
-const navigatorOptions = {
-  tabBarPosition: 'bottom',
-  animationEnabled: true,
-  swipeEnabled: false,
-
-  tabBarOptions: {
-    activeTintColor: '#e91e63',
-    showIcon: true,
-    indicatorStyle: {
-      display: 'none'
-    },
-    labelStyle: {
-      fontSize: 13
-    },
-    tabStyle: {
-      height: 70
-    }
-  },
-}
-
-OrderTablesNavigator = StackNavigator({
-  OrderTables: {
-    screen: OrderTables
-  },
-  Orders: {
-    screen: Orders
-  }
-})
-
-Navigator = TabNavigator({
-  Tables: {
-    screen: Tables
-  },
-  Menu: {
-    screen: Menu
-  },
-  OrderTables: {
-    screen: OrderTablesNavigator
-  },
-}, navigatorOptions);
+import Navigator from './src/routes'
 
 export default class App extends Component {
 
@@ -70,6 +21,3 @@ export default class App extends Component {
     )
   }
 }
-
-
-

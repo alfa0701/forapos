@@ -9,7 +9,7 @@ export default class Menu extends Component {
 
   static navigationOptions = {
     tabBarLabel: 'Siparişler',
-    tabBarIcon: ({ tintColor }) => <Icon name="ios-cafe" active style={{color: tintColor}} />,
+    tabBarIcon: ({ tintColor }) => <Icon name="ios-cafe" active style={{color: tintColor, fontSize: 17}} />,
   }
 
   handleTableSelect(item) {

@@ -9,7 +9,7 @@ export default class Menu extends Component {
 
   static navigationOptions = {
     tabBarLabel: 'Masalar',
-    tabBarIcon: ({ tintColor }) => <Icon name="ios-clipboard" active style={{color: tintColor}} />,
+    tabBarIcon: ({ tintColor }) => <Icon name="ios-clipboard" active style={{color: tintColor, fontSize: 17}} />,
   }
 
   render() {

@@ -14,13 +14,13 @@ export default class Menu extends Component {
 
   handleTableSelect(item) {
     this.props.saloons.ordersViewTable = item.id
-    this.props.navigation.navigate({routeName: 'Orders'})
+    NavigationActions.navigate({routeName: 'Orders'})
   }
 
   renderRow(item) {
     return (
-      <ListItem key={item.id}>
-        <Body button onPress={e => this.handleTableSelect(item)}>
+      <ListItem key={item.id} button onPress={e => this.handleTableSelect(item)}>
+        <Body>
           <Text>{item.name}</Text>
         </Body>
         <Icon name="ios-arrow-forward" />
